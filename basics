@@ -1,0 +1,170 @@
+Login: Mobile number
+
+# Basics
+
+```python
+> print(”hello world. \n This is Sai”)
+
+# \n breaks the line to 2.
+
+Output:
+hello world
+This is Sai
+```
+
+type(”X“) → Anything in the place of X will be string. ‘type’ function will help users to understand the datatype of the given in ().
+
+```python
+Example
+> type(1+2j)
+
+Output: Complex
+```
+
+```python
+#Variables are case sensistive
+> name = 'Sai'
+> Name = 'Nukala'
+```
+
+```python
+>[1]: 1+3
+Output:[1]: 4
+#Here the output is just a calculation.
+
+>[1]: print(1+3)
+Output: 4
+#Here the output is calculated and OUTPUT is projected
+```
+
+```python
+#Concatenation
+> "1" + "1"
+Output: '11'
+
+> int("1") + int("1") #Converting the variable to Integer.
+Output: 2
+
+```
+
+```python
+#Print
+
+#V1
+>print("Hello world")
+Hello World
+
+#V2
+>age=32
+>print("My age is:",age)
+My age is: 32
+
+#V3 Important
+>print("My age is: {age}")
+My age is: {age}
+
+>print(f"My age is: {age}")
+#f is foratting.
+My age is: 32
+
+```
+
+```python
+#Format()
+
+name="Sai"
+age=31
+
+print("My name is {} and age is {}".format(name,age))
+Output: My name is Sai and age is 31
+#The format function feature is limited here. If the values 'name','age' changes the output reflects the same values accordingly.
+print("My name is {} and age is {}".format(age,name))
+Output: My name is 31 and age is Sai.
+
+#Format #Placeholder
+print("My name is {FirstName} & age is {NoOfYrs}".format(FirstName=name,NoOfYrs=age))
+Output: My name is Sai & age is 31
+#Placeholder is the holder of variables at fixed location.
+print("My name is {FirstName} & age is {NoOfYrs}".format(NoOfYrs=age,FirstName=name))
+Output: My name is Sai & age is 31
+
+#Example for Format()
+name="Sai Nukala"
+age=31
+degree="B.Tech"
+
+print(f"My name is {name}, age is {age} & I've pursuied my {degree}")
+
+print("My name is {}, age is {} & I've pursuied my {}".format(name,age,degree))
+
+print("My name is {MyName}, age is {MyAge} & I've pursuied my {MyDegree}".format(MyName=name,MyAge=age,MyDegree=degree))
+
+```
+
+```python
+#Control Flow
+## Decision aking Statements
+
+#Type Casting
+
+#If condition
+age=31
+
+if age<=45:
+	print("You are young")
+
+##input() if condition
+age=int(input("Age"))
+if age>=18 and age<=45:
+	print("You are eligible")
+
+##input() if-else condition
+age=int(input("Age"))
+if age>=18 and age<=45:
+	print("You are eligible")
+else:
+	print("You are not eligible")
+
+TASK
+#Input a product price.
+#If product price >1000 give 20% off
+#If the product price <=1000 give 30% off
+#If none of the above print random value
+#Where price of actual product & price post discount should be printed
+
+price=int(input("Product Price"))
+if price>1000:
+    print("Hurray!! you got 20% off on your purchase value of {price1} \n Your product price post disount is {disvalue1}".format(price1=price,disvalue1=(price*0.8)))
+if price<=1000 and price>0:
+    print("Amazing!! you got 30% off on your purchase value of {price2} \n Your product price post disount {disvalue2}".format(price2=price,disvalue2=(price*0.7)))
+else:
+    print("Uh oh.. That's okay")
+
+##input() elif condition
+Note: If only once, elif more than once, else only once.
+
+subject=str(input("Class Name"))
+if subject == "science":
+    print("I am in the {sub1} class".format(sub1=subject))
+elif subject == "math":
+    print("I am in the {sub2} class".format(sub2=subject))
+elif subject == "social":
+    print("I am in the {sub3} class".format(sub3=subject))
+else:
+    print("Uh oh.. I'm not in a right place")
+
+##Nested IF
+product_price=int(input("Enter the price"))
+if product_price>3000:
+    if product_price==4999:
+        print("You've unlocked additional disount")
+    print("The price of product is {dis_price30} after disount of 30%".format(dis_price30=product_price*0.7))
+elif product_price>=2001 and product_price<=3000:
+    if product_price==2999:
+        print("Hurray..! You won 1+1 jackpot along with disount")
+    print("The price of product is {dis_price20} after discount of 20%".format(dis_price20=product_price*0.8))
+elif product_price>=1001 and product_price<=2000:
+    print("The price of product is {dis_price10} after discount of 10%".format(dis_price10=product_price*0.9))
+else:
+    print("Sorry! you are not eligible for the offer")
+```
